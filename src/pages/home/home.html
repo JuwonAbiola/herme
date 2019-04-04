@@ -1,14 +1,63 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
+<ion-header no-border>
+  <ion-toolbar>
+    <ion-buttons>
+      <button ion-button icon-only style="float:right">
+        <ion-icon name="ios-notifications" style="color: #374699"></ion-icon>
+      </button>
+    </ion-buttons>
+
+    <button ion-button menuToggle>
+      <ion-icon name="menu" style="color:#374699"></ion-icon>
+    </button>
+  </ion-toolbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content>
+  <div #map id="map">
+  </div>
+  <div class="cen">
+    <ion-card class="box pd1">
+      <ion-list>
+        <ion-item>
+          <ion-label>yaban</ion-label>
+          <ion-checkbox color="blue"></ion-checkbox>
+        </ion-item>
+        <hr>
+        <ion-item>
+          <ion-input type="text" placeholder="Enter Drop Location"></ion-input>
+          <ion-icon color="blue" name="ios-send" item-left></ion-icon>
+        </ion-item>
+      </ion-list>
+    </ion-card>
+  </div>
+  <div class="cen">
+    <ion-card class="box pd">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <div>
+              <ion-icon checked="true" name="ios-bicycle"></ion-icon>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div>
+              <ion-icon name="ios-car"></ion-icon>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div>
+              <ion-icon name="ios-train"></ion-icon>
+            </div>
+          </ion-col>
+          <ion-col>
+            <div>
+              <ion-icon name="ios-jet"></ion-icon>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <button ion-button block style="font-style:bold;background:#374699;color: #fff;" (click)="lo()">REQUEST
+        DELIVERY</button>
+    </ion-card>
+  </div>
 </ion-content>
